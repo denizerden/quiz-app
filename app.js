@@ -36,13 +36,13 @@ Quiz.prototype.guess = function (answer){
 
     if(question.checkAnswer(answer)){
         this.score++;
-        $('#check-question').empty();
+       // $('#check-question').empty();
       
         $('#check-question').append(`<h4>Doğru cevap</h4>`)
         $('#check-question').append(`<button   class=" btn btn-primary next-question">Sonraki Soru</button>`)
     }
     else{
-        $('#check-question').empty();
+       // $('#check-question').empty();
        
         $('#check-question').append(`<h4 class="answer">Doğru cevap ${question.answer}</h4>`)
         $('#check-question').append(`<button  class=" btn btn-primary next-question">Sonraki Soru</button>`)
@@ -84,6 +84,7 @@ $(document).ready(function(){
             document.querySelector('#question').textContent = question.text;
             //console.log("hello");
             $('#buttons').empty();
+            $('#check-question').empty();
             for(let i =0; i<choices.length;i++){
                 
                 $('#buttons').append(`<button id="btn-${i}" class=" btn btn-primary m-2">
