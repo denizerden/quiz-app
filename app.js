@@ -36,6 +36,16 @@ Quiz.prototype.guess = function (answer){
 
     if(question.checkAnswer(answer)){
         this.score++;
+        $('#check-question').empty();
+      
+        $('#check-question').append(`<h4>Doğru cevap</h4>`)
+        $('#check-question').append(`<button   class=" btn btn-primary next-question">Sonraki Soru</button>`)
+    }
+    else{
+        $('#check-question').empty();
+       
+        $('#check-question').append(`<h4 class="answer">Doğru cevap ${question.answer}</h4>`)
+        $('#check-question').append(`<button  class=" btn btn-primary next-question">Sonraki Soru</button>`)
     }
     this.questionIndex++;
 }
@@ -97,11 +107,17 @@ $(document).ready(function(){
     function guess(id,guess){
     let btn = document.getElementById(id);
     btn.onclick = function(){
+        $(".btn").attr("disabled", true);
         quiz.guess(guess);
-        loadQuestion();
+        $(".next-question").click(function(){
+            console.log("tesst");
+            loadQuestion();
+        });
+        //loadQuestion();
     }
     
     }
+    
     
     function showScore(){
         let html = `<h2>Score</><h4>${quiz.score}</h4>`;
