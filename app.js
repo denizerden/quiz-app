@@ -51,7 +51,7 @@ Quiz.prototype.guess = function (answer){
 }
 
 let q1 = new Question(" İlk Çağ Uygarlıklarından Hangisi Yazıyı İcat Etmiştir?",["Hititler","Elamlar","Sümerler","Urartular"],"Sümerler");
-let q2 = new Question(" Bir Sebepten Dolayı Tek Kulağına Küpe Takan Osmanlı Padişahı Kimdir? ",["Kanuni Sultan Süleyman","Yavuz Sultan Selim ","Orhan Bey ","Fatih Sultan Selim "],"Yavuz Sultan Selim");
+let q2 = new Question(" Bir Sebepten Dolayı Tek Kulağına Küpe Takan Osmanlı Padişahı Kimdir? ",["Kanuni Sultan Süleyman","Yavuz Sultan Selim","Orhan Bey ","Fatih Sultan Selim "],"Yavuz Sultan Selim");
 let q3 = new Question(" Hangi yabancı futbolcu Fenerbahçe forması giymiştir?",["Simoviç","Schumacher","Prekazi"],"Schumacher");
 let q4 = new Question("Magna Carta hangi ülkenin kralıyla yapılmış bir sözleşmedir?",["İngiltere","İspanya","Fransa"],"İngiltere");
 let q5 = new Question(" Bir işin uygun ve kolay olduğunu belirtmek için hangisi söylenir?",["Burnuma göre","Kaşıma göre","Bıyığıma göre","Dişime göre"],"Dişime göre");
