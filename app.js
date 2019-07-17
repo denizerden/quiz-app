@@ -72,7 +72,7 @@ $(document).ready(function(){
             let question = quiz.getQuestion();
             let choices = question.choices;
             document.querySelector('#question').textContent = question.text;
-            console.log("hello");
+            //console.log("hello");
             $('#buttons').empty();
             for(let i =0; i<choices.length;i++){
                 
@@ -84,11 +84,11 @@ $(document).ready(function(){
                 
             </button>`)
                 let element = document.querySelector(`#btn-${i}`);
-                console.log(element);
+                //console.log(element);
                 element.append (choices[i]);
     
                 guess('btn-'+i,choices[i]);
-                console.log(choices[i]);
+                //console.log(choices[i]);
             }
             showProgress();
         }
